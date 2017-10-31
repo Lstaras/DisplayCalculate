@@ -59,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private void initEntry(){
         for (int i=0;i<20;i++)
         {
-            Entry aaa = new Entry(R.drawable.aaa,"aaa","111");
-            entryList.add(aaa);
+            entryList.add(new Entry(R.drawable.aaa,"Text1","Text2"));
         }
     }
 
@@ -83,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_history:
                 Intent intent = new Intent(MainActivity.this,HistoryActivity.class);
                 startActivity(intent);
-                ;break;
+                break;
             case R.id.action_settings:
                 Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show();break;
             case R.id.action_exit:
@@ -107,6 +106,6 @@ public class MainActivity extends AppCompatActivity {
         this.finish();
         System.exit(0);
         }
-    }
+    }//双击退出程序的实现
 
 }
